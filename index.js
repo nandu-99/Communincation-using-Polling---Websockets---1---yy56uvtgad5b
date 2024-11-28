@@ -18,7 +18,7 @@ app.post("/message", async(req, res)=>{
   const timestamp = new Date().toISOString(); 
   const mes =  { "user": user, "text": text, "timestamp": timestamp }
   messages.push(mes)
-  return res.status(400).json({ "message": mes})
+  return res.status(200).json({ "message": mes})
 })
 
 app.get("/findMessages", (req, res)=>{
